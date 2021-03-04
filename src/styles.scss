@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/normalize";
+@import "assets/css/nbgoods-font";
+
+:root {
+  --disabled: #C2C2C2;
+  --active: #DD2C2C;
+  --black: #252525;
+}
