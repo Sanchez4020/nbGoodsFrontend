@@ -1,11 +1,15 @@
+import { Seller } from "./seller.model";
+import { Brand } from "./brand.model";
+
 export class Product {
   productId: number;
-  brand: string;
-  sellerId?: number;
-  categoryId: number;
-  size: string;
+  article: string;
+  brand: Brand;
+  seller?: Seller;
+  category: Category; // доработать
+  size: Array<string>; // доработать
   type: Array<string>;
-  color: string;
+  color: Array<string>;
   condition: string;
   photos: Array<string>;
   cost: Prices;
@@ -14,6 +18,7 @@ export class Product {
   likes: number;
   comments: Array<Comment>;
   userStatus: UserStatus;
+  weight: number;
 }
 
 export interface Prices {
@@ -38,4 +43,15 @@ export class UserStatus {
   liked: boolean;
   viewed: boolean;
   inCart: boolean;
+}
+
+export interface Category {
+  id: number;
+  desc: string;
+  sizeTypes: Array<any>; // надо проработать получше
+  logoMin: string;
+  logoMax: string;
+  parents: string;
+  child: string;
+  // надо доработать сущность
 }

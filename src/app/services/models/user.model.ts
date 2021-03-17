@@ -1,4 +1,5 @@
 import {Product} from "./product.model";
+import { Seller } from "./seller.model";
 
 export class User {
   id: number;
@@ -6,17 +7,14 @@ export class User {
   firstName: string;
   secondName: string;
   email: string;
-  gender?: UserGender;
+  gender: UserGender;
   deliveryAddress?: Array<DeliveryAddress>;
   orderHistory?: Array<OrderHistory>;
   itemsInCart?: Array<Product>;
+  sizes?: Sizes;
 }
 
-export interface Seller {
-  sellerId: number;
-}
-
-export type UserGender = 'male' | 'female' | 'secret';
+export type UserGender = 'male' | 'female' | null;
 
 export interface DeliveryAddress {
   main: string;
@@ -24,12 +22,18 @@ export interface DeliveryAddress {
   city: string;
   country: string;
   index: number;
+  fias: string;
 }
 
 export interface OrderHistory {
+  orderId: number;
   number: string;
-  date: string;
+  date: Array<Date>;
   products: Array<Product>;
-  status: string;
-  price: number;
+  status: number;
+  coast: number;
+}
+
+export interface Sizes {
+  value: any;
 }
