@@ -1,3 +1,19 @@
+сбилдить проект
+
+git pull git@github.com:Sanchez4020/nbGoodsFrontend.git
+
+cd nbGoodsFrontend
+
+npm i --save-dev
+
+npm run start 
+
+navigate to `http://localhost:4200/`
+
+
+
+
+
 # NbGoodsFrontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
