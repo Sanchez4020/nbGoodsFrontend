@@ -32,7 +32,7 @@ export interface Description {
   description?: string;
 }
 
-export type ProductGender = 'male' | 'female' | 'boy' | 'girl' | 'unisex';
+export type ProductGender = 'male' | 'female' | 'unisex' | 'boy' | 'girl' | 'childUniSex';
 
 export interface Comment {
   userId: number;
